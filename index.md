@@ -8,6 +8,6 @@ b, 浅层复制可以使用  a = b.View()  这种复制用 print(a is b)进行�
 
 url=www.baidu.com
 
-**Bold** and _Italic_ and `Code` text
+**Bold** and _Italic_ and `Code` text.
 
 [Link](url) and ![Image](src)
