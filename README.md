@@ -13,6 +13,9 @@
   注：赋值变量不用 "=" 用 "copy"。 “=” 如 a=b a、b指针相同，修改其中一个都会改变。 
 
 2、常用Numpy 命令
+   
    a, numpy.argmax     最大值索引
+   
    b, numpy.tile       numpy.tile(data,(3,5)) 赋值data数据成为[3,5]的矩阵
+   
    c, numpy.argsort    排序返回索引 （默认从小到大）
