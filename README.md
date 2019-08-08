@@ -19,3 +19,19 @@
    b, numpy.tile       numpy.tile(data,(3,5)) 赋值data数据成为[3,5]的矩阵
    
    c, numpy.argsort    排序返回索引 （默认从小到大）
+   
+# Method two: pivot_table is method to show the relationship between 2 data
+p_fare = titanic_survival.pivot_table(index="Pclass", values="Fare", aggfunc=np.mean)
+print(p_fare)
+
+p_age = titanic_survival.pivot_table(index="Pclass", values="Age", aggfunc=np.mean)
+print(p_age)
+
+# Using different algorithms to calculate
+em_fare_survived = titanic_survival.pivot_table(index="Embarked", values=["Fare","Survived"],aggfunc=np.sum)
+print(em_fare_survived)
+
+# Using dropna method to clean data
+drop_na_columns = titanic_survival.dropna(axis=1)
+titanic_survival_new_one = titanic_survival.dropna(axis=0,subset=["Age","Sex"])
+print(titanic_survival_new_one.shape)
