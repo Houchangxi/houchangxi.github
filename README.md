@@ -35,3 +35,26 @@ print(em_fare_survived)
 drop_na_columns = titanic_survival.dropna(axis=1)
 titanic_survival_new_one = titanic_survival.dropna(axis=0,subset=["Age","Sex"])
 print(titanic_survival_new_one.shape)
+
+
+fandango = pd.read_csv("fandango_score_comparison.csv")
+# We can see 3 type include DataFrame,Series and ndarray in Pandas data type.
+# To Summary, Pandas is base on numpy package :
+# Pandas <class 'pandas.core.frame.DataFrame'>
+# Series in Pandas <class 'pandas.core.series.Series'>
+# Items in Series <class 'numpy.ndarray'>
+
+
+# We can use numpy to calculate series
+
+1,
+print(np.add(series_custom,series_custom))
+
+2,
+series_custom_more_than_50 = series_custom[series_custom>50]
+
+3,
+rt_critics = Series(fandango['RottenTomatoes'].values, index=fandango['FILM'])
+rt_users = Series(fandango['RottenTomatoes_User'].values, index=fandango['FILM'])
+rt_mean = (rt_scores+rt_critics)/2
+
