@@ -55,6 +55,8 @@ series_custom_more_than_50 = series_custom[series_custom>50]
 
 3,
 rt_critics = Series(fandango['RottenTomatoes'].values, index=fandango['FILM'])
+
 rt_users = Series(fandango['RottenTomatoes_User'].values, index=fandango['FILM'])
+
 rt_mean = (rt_scores+rt_critics)/2
 
