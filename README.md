@@ -39,10 +39,10 @@ print(titanic_survival_new_one.shape)
 
 fandango = pd.read_csv("fandango_score_comparison.csv")
 # We can see 3 type include DataFrame,Series and ndarray in Pandas data type.
-# To Summary, Pandas is base on numpy package :
-# Pandas <class 'pandas.core.frame.DataFrame'>
-# Series in Pandas <class 'pandas.core.series.Series'>
-# Items in Series <class 'numpy.ndarray'>
+To Summary, Pandas is base on numpy package :
+Pandas <class 'pandas.core.frame.DataFrame'>
+Series in Pandas <class 'pandas.core.series.Series'>
+Items in Series <class 'numpy.ndarray'>
 
 
 # We can use numpy to calculate series
