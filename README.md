@@ -1,7 +1,7 @@
 # houchangxi.github.ai
 
 ## Andrew Hou's Space
-# Numpy 学习
+# Numpy 和 Pandas 学习
 重点：
 
 1、Python切记 注意事项
