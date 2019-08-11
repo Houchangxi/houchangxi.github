@@ -61,3 +61,35 @@ rt_mean = (rt_scores+rt_critics)/2
    b, numpy.tile       numpy.tile(data,(3,5)) 赋值data数据成为[3,5]的矩阵
    
    c, numpy.argsort    排序返回索引 （默认从小到大）
+   
+ # 开源数据网址链接
+
+https://opendata.cityofnewyork.us/
+
+https://www.kaggle.com/datasets
+
+https://github.com/awesomedata/awesome-public-datasets
+
+- Use AI and bots to improve real-time communications with natural language processing => https://developer.ibm.com/callforcode/resources/translate/
+
+- Understand, analyze, and predict health and nutrition needs to improve services with data science => https://developer.ibm.com/callforcode/resources/healthcare/
+
+- Improve logistics based on traffic and weather activity to predict the number of people affected => https://developer.ibm.com/callforcode/resources/traffic-and-weather/
+
+- Collect and analyze device sensor data to take corrective or preventative action automatically => https://developer.ibm.com/callforcode/resources/preventative-action/
+
+- Use machine learning, deep learning, and visual recognition to improve critical processes => https://developer.ibm.com/callforcode/resources/visual-recognition/
+
+More generic examples:
+
+- Predicting the Best Retail Location
+
+- Detecting insurance fraud
+
+- Predicting crowd movement on public events
+
+- Predict heart rate based on activity
+
+- Optimize irrigation based on moisture sensor values and weather forecast
+
+- Predict production machine failure based on vibration sensor data
