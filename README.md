@@ -61,3 +61,32 @@ rt_mean = (rt_scores+rt_critics)/2
    b, numpy.tile       numpy.tile(data,(3,5)) 赋值data数据成为[3,5]的矩阵
    
    c, numpy.argsort    排序返回索引 （默认从小到大）
+   
+ # 开源数据网址链接
+
+https://opendata.cityofnewyork.us/
+
+https://www.kaggle.com/datasets
+
+https://github.com/awesomedata/awesome-public-datasets
+
+More generic examples:
+
+Predicting the Best Retail Location
+
+Detecting insurance fraud
+
+Predicting crowd movement on public events
+
+Predict heart rate based on activity
+
+Optimize irrigation based on moisture sensor values and weather forecast
+
+Predict production machine failure based on vibration sensor data
+
+# Recommend Website for learning
+
+https://dataskeptic.com/
+
+https://planetpython.org/
+
