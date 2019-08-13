@@ -70,26 +70,23 @@ https://www.kaggle.com/datasets
 
 https://github.com/awesomedata/awesome-public-datasets
 
-- Use AI and bots to improve real-time communications with natural language processing => https://developer.ibm.com/callforcode/resources/translate/
-
-- Understand, analyze, and predict health and nutrition needs to improve services with data science => https://developer.ibm.com/callforcode/resources/healthcare/
-
-- Improve logistics based on traffic and weather activity to predict the number of people affected => https://developer.ibm.com/callforcode/resources/traffic-and-weather/
-
-- Collect and analyze device sensor data to take corrective or preventative action automatically => https://developer.ibm.com/callforcode/resources/preventative-action/
-
-- Use machine learning, deep learning, and visual recognition to improve critical processes => https://developer.ibm.com/callforcode/resources/visual-recognition/
-
 More generic examples:
 
-- Predicting the Best Retail Location
+Predicting the Best Retail Location
 
-- Detecting insurance fraud
+Detecting insurance fraud
 
-- Predicting crowd movement on public events
+Predicting crowd movement on public events
 
-- Predict heart rate based on activity
+Predict heart rate based on activity
 
-- Optimize irrigation based on moisture sensor values and weather forecast
+Optimize irrigation based on moisture sensor values and weather forecast
 
-- Predict production machine failure based on vibration sensor data
+Predict production machine failure based on vibration sensor data
+
+# Recommend Website for learning
+
+https://dataskeptic.com/
+
+https://planetpython.org/
+
