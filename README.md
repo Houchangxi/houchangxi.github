@@ -1,8 +1,23 @@
 # houchangxi.github.ai
 
 ## Andrew's Space
-# Numpy 和 Pandas 数据清洗
-   
+# Algorithms
+
+# DecideTree
+https://github.com/Houchangxi/houchangxi.github.ai_numpy/tree/master/algorithm/DecideTree
+# DeepLearning
+https://github.com/Houchangxi/houchangxi.github.ai_numpy/tree/master/algorithm/DeepLearningForPic
+# Kmeans
+https://github.com/Houchangxi/houchangxi.github.ai_numpy/tree/master/algorithm/Kmeans
+# LR
+https://github.com/Houchangxi/houchangxi.github.ai_numpy/tree/master/algorithm/LogisticsRegression
+# PCA
+https://github.com/Houchangxi/houchangxi.github.ai_numpy/tree/master/algorithm/PCA
+# StockForest
+https://github.com/Houchangxi/houchangxi.github.ai_numpy/tree/master/algorithm/StockForecast
+
+
+# Numpy 和 Pandas 数据清洗  
 # Method two: pivot_table is method to show the relationship between 2 data
 p_fare = titanic_survival.pivot_table(index="Pclass", values="Fare", aggfunc=np.mean)
 print(p_fare)
