@@ -85,7 +85,7 @@ print(lowercased)
 # 通过map取值
 data['animal']=lowercased.map(meat_to_animal)
 print(data)
-print(data['food'].map(lambda x : meat_to_animal[x.lower()]))
+print('++++++++',data['food'].map(lambda x : meat_to_animal[x.lower()]))
 
 # Replacing Values
 data_ = pd.Series([1.,-999.,2.,-999.,-1000.,3.,])
