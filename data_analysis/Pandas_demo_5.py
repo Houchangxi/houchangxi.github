@@ -21,3 +21,6 @@ df = df.set_index(['Location','Name'])
 # df.append({[('Store 2','Kevyn')]:['Kitty Food','3.00']})
 df = df.append(pd.Series(data={'Cost': 3.00, 'Item Purchased': 'Kitty Food'}, name=('Store 2', 'Kevyn')))
 print(df)
+
+
+
