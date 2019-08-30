@@ -302,6 +302,3 @@ def answer_thirteen():
     Top15['PopEst'] = Top15['PopEst'].map('{:,}'.format)
     return Top15['PopEst']
 
-
-
-
