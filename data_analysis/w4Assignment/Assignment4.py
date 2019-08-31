@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from scipy import stats
+from scipy.stats import ttest_ind
 
 skpid = list(range(5))
 skpid.append(6)
@@ -217,28 +218,80 @@ def convert_housing_data_to_quarters():
 
     return result
 
+# price_ratio=quarter_before_recession/recession_bottom
+def run_ttest():
+    '''First creates new data showing the decline or growth of housing prices
+    between the recession start and the recession bottom. Then runs a ttest
+    comparing the university town values to the non-university towns values, 
+    return whether the alternative hypothesis (that the two groups are the same)
+    is true or not as well as the p-value of the confidence. 
 
-recession_button = get_recession_bottom()
-recession_start = get_recession_start()
-recession_end = get_recession_end()
-print(recession_start,recession_button,recession_end)
+    Return the tuple (different, p, better) where different=True if the t-test is
+    True at a p<0.01 (we reject the null hypothesis), or different=False if 
+    otherwise (we cannot reject the null hypothesis). The variable p should
+    be equal to the exact p value returned from scipy.stats.ttest_ind(). The
+    value for better should be either "university town" or "non-university town"
+    depending on which has a lower mean price ratio (which is equivilent to a
+    reduced market loss).'''
 
-house_price_all = convert_housing_data_to_quarters()
+    recession_button = get_recession_bottom()
+    recession_start = get_recession_start()
+    recession_end = get_recession_end()
+    house_price_all = convert_housing_data_to_quarters()
+    l_date = house_price_all.columns.values.tolist()
+    recession_house_data = house_price_all[l_date[l_date.index(recession_start) - 1:l_date.index(recession_button) + 1]]
+    recession_house_data = recession_house_data.assign(
+        price_ratio=recession_house_data['2008q2'] / recession_house_data['2009q2'])
+    #     print(recession_house_data['2008q2'].dropna().shape)
+    university_towns_list = get_list_of_university_towns()
+    university_towns_house_price = pd.merge(university_towns_list, recession_house_data, how='inner', right_index=True,
+                                            left_on=['State', 'RegionName']).set_index(['State', 'RegionName'])
+    not_university_towns_house_price = recession_house_data.drop(university_towns_house_price.index)
+    print(university_towns_house_price.shape, '++', not_university_towns_house_price.shape)
 
-l_date = house_price_all.columns.values.tolist()
-print(l_date[l_date.index(recession_start):l_date.index(recession_button)+1])
-recession_house_data = house_price_all[l_date[l_date.index(recession_start):l_date.index(recession_button)+1]]
+    university_towns_house_price_ratio = university_towns_house_price['price_ratio']
+    not_university_towns_house_price_ratio = not_university_towns_house_price['price_ratio']
+    print(university_towns_house_price_ratio.shape, '+++', not_university_towns_house_price_ratio.shape)
 
-# print((house_price_all.columns >recession_start))
+    university_towns_house_price_ratio.drop_duplicates(keep=False, inplace=True)
+    not_university_towns_house_price_ratio.drop_duplicates(keep=False, inplace=True)
+    print(university_towns_house_price_ratio.shape, '+++', not_university_towns_house_price_ratio.shape)
+
+    #     university_towns_house_price.drop_duplicates(keep=False,inplace=True)
+    #     not_university_towns_house_price.drop_duplicates(keep=False,inplace=True)
+    #     print(university_towns_house_price.shape,'++',not_university_towns_house_price.shape)
+
+    #     university_towns = university_towns_house_price_ratio['price_ratio']
+    #     non_university_towns = not_university_towns_house_price_ratio['price_ratio']
 
 
-# decline_house_price =
+    #     university_towns=university_towns.dropna(how='all')
+    #     print(university_towns.shape)
+    #     non_university_towns = non_university_towns.dropna(how='all')
+    #     print(non_university_towns.shape)
+
+    ttest_res = ttest_ind(university_towns_house_price_ratio, not_university_towns_house_price_ratio, nan_policy='omit')
+    #     ttest_res = ttest_ind(university_towns,non_university_towns,nan_policy='omit')
+
+    reject_null_hypothesis = None
+    lower_mean_price_ratio = None
+    if ttest_res[1] < 0.01:
+        reject_null_hypothesis = True
+    else:
+        reject_null_hypothesis = False
+    if ttest_res[0] < 0:
+        lower_mean_price_ratio = "university town"
+    else:
+        lower_mean_price_ratio = "non-university town"
+
+    reject_null_hypothesis, ttest_res[1], lower_mean_price_ratio
+
+    return reject_null_hypothesis, ttest_res[1], lower_mean_price_ratio
 
 
 
 
-
-
+print(run_ttest())
 
 
 

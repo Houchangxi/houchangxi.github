@@ -1,5 +1,9 @@
 import datetime as dt
 import time as tm
+import matplotlib.pyplot as plt
+from matplotlib import animation
+import math
+import numpy as np
 
 
 print(tm.time())
@@ -16,3 +20,4 @@ print(today>today-delta)
 
 print(['a','b','c']+[1,2,3])
 print(type(lambda x: x+1))
+#
