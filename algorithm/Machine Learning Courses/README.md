@@ -22,8 +22,8 @@ We need to fix this by
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 sudo python3 -m pip install jupyter
 Please make sure setup jupyter notebook by
-LANG=zn jupyter notebook
-
+LANG=zn jupyter notebook  or  LANG=zn ipython notebook
+# 这段用中文解释一下 切记要加 LANG=zn 不然无法启动浏览器
 
 Download the data and sample code and familiarize yourself with the notebooks
 Before doing the assignments in this course, familiarize yourself with the two notebooks we covered in the videos:
