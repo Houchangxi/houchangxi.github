@@ -23,3 +23,16 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 sudo python3 -m pip install jupyter
 Please make sure setup jupyter notebook by
 LANG=zn jupyter notebook
+
+
+Download the data and sample code and familiarize yourself with the notebooks
+Before doing the assignments in this course, familiarize yourself with the two notebooks we covered in the videos:
+
+Download the notebook that covers getting started with Python: Getting started with iPython Notebook.ipynb
+Download the notebook that covers getting started with SFrames: Getting Started with SFrames.ipynb
+Download the simple people dataset: people-example.csv
+
+After running SFrames.ipynb, you will find out lots of error. Such as:
+"AttributeError: 'NoneType' object has no attribute 'add_variable'"
+1, pip install tornado==4.5.3
+and make sure to resetup jupyter notebook. This is key!  Don't reinstall Anaconda 2.
